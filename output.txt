@@ -1,0 +1,652 @@
+Loading Data Locally
+Setting Up SelectKBestPreProcessor k=4
+Setting Up ClassificationEvaluator
+Setting Up StandardScalerTransformer
+Setting Up MinMaxScalerTransformer
+Setting Up VotingClassifierModel
+Setting Up LogisticRegressionClassifier
+Setting Up CARTClassifier
+Setting Up SVMClassifier
+Setting Up BaggingClassifierModel
+Setting Up RandomForestClassifierModel
+Setting Up ExtraTreesClassifierModel
+Setting Up AdaBoostClassifierModel
+Setting Up GradientBoostingClassifierModel
+Setting Up LogisticRegressionClassifier
+Setting Up KNNClassifier
+Setting Up CARTClassifier
+Setting Up NaiveBayesClassifier
+Setting Up BaggingClassifierModel
+Setting Up RandomForestClassifierModel
+Setting Up ExtraTreesClassifierModel
+Setting Up AdaBoostClassifierModel
+Setting Up GradientBoostingClassifierModel
+
+Training for Voting-orig
+
+Estimation for Voting-orig
+
+Confusion Matrix:
+[[125  22]
+ [ 32  52]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.796178  0.850340  0.822368  147.000000
+1              0.702703  0.619048  0.658228   84.000000
+accuracy       0.766234  0.766234  0.766234    0.766234
+macro avg      0.749441  0.734694  0.740298  231.000000
+weighted avg   0.762187  0.766234  0.762681  231.000000
+
+Training for Voting-StandardScaler
+
+Estimation for Voting-StandardScaler
+
+Confusion Matrix:
+[[125  22]
+ [ 34  50]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.786164  0.850340  0.816993  147.000000
+1              0.694444  0.595238  0.641026   84.000000
+accuracy       0.757576  0.757576  0.757576    0.757576
+macro avg      0.740304  0.722789  0.729010  231.000000
+weighted avg   0.752811  0.757576  0.753005  231.000000
+
+Training for Voting-MinMaxScaler
+
+Estimation for Voting-MinMaxScaler
+
+Confusion Matrix:
+[[126  21]
+ [ 32  52]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.797468  0.857143  0.826230  147.000000
+1              0.712329  0.619048  0.662420   84.000000
+accuracy       0.770563  0.770563  0.770563    0.770563
+macro avg      0.754899  0.738095  0.744325  231.000000
+weighted avg   0.766509  0.770563  0.766663  231.000000
+
+GridSearching LR-orig
+
+LR-orig - Melhor: 0.7543326345213137 usando {'LR__C': 1.0, 'LR__max_iter': 100}
+
+Training for LR-orig
+
+Estimation for LR-orig
+
+Confusion Matrix:
+[[129  18]
+ [ 33  51]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.796296  0.877551  0.834951  147.000000
+1              0.739130  0.607143  0.666667   84.000000
+accuracy       0.779221  0.779221  0.779221    0.779221
+macro avg      0.767713  0.742347  0.750809  231.000000
+weighted avg   0.775509  0.779221  0.773757  231.000000
+
+GridSearching LR-StandardScaler
+
+LR-StandardScaler - Melhor: 0.7580013976240391 usando {'LR__C': 0.1, 'LR__max_iter': 100}
+
+Training for LR-StandardScaler
+
+Estimation for LR-StandardScaler
+
+Confusion Matrix:
+[[130  17]
+ [ 33  51]]
+
+Classification Report:
+              precision    recall  f1-score    support
+0              0.797546  0.884354  0.838710  147.00000
+1              0.750000  0.607143  0.671053   84.00000
+accuracy       0.783550  0.783550  0.783550    0.78355
+macro avg      0.773773  0.745748  0.754881  231.00000
+weighted avg   0.780257  0.783550  0.777743  231.00000
+
+GridSearching LR-MinMaxScaler
+
+LR-MinMaxScaler - Melhor: 0.7598881900768693 usando {'LR__C': 10.0, 'LR__max_iter': 100}
+
+Training for LR-MinMaxScaler
+
+Estimation for LR-MinMaxScaler
+
+Confusion Matrix:
+[[128  19]
+ [ 33  51]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.795031  0.870748  0.831169  147.000000
+1              0.728571  0.607143  0.662338   84.000000
+accuracy       0.774892  0.774892  0.774892    0.774892
+macro avg      0.761801  0.738946  0.746753  231.000000
+weighted avg   0.770864  0.774892  0.769776  231.000000
+
+GridSearching KNN-orig
+
+KNN-orig - Melhor: 0.7542976939203354 usando {'KNN__metric': 'manhattan', 'KNN__n_neighbors': 15, 'KNN__weights': 'uniform'}
+
+Training for KNN-orig
+
+Estimation for KNN-orig
+
+Confusion Matrix:
+[[125  22]
+ [ 28  56]]
+
+Classification Report:
+              precision    recall  f1-score    support
+0              0.816993  0.850340  0.833333  147.00000
+1              0.717949  0.666667  0.691358   84.00000
+accuracy       0.783550  0.783550  0.783550    0.78355
+macro avg      0.767471  0.758503  0.762346  231.00000
+weighted avg   0.780977  0.783550  0.781706  231.00000
+
+GridSearching KNN-StandardScaler
+
+KNN-StandardScaler - Melhor: 0.7598183088749126 usando {'KNN__metric': 'manhattan', 'KNN__n_neighbors': 13, 'KNN__weights': 'uniform'}
+
+Training for KNN-StandardScaler
+
+Estimation for KNN-StandardScaler
+
+Confusion Matrix:
+[[120  27]
+ [ 26  58]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.821918  0.816327  0.819113  147.000000
+1              0.682353  0.690476  0.686391   84.000000
+accuracy       0.770563  0.770563  0.770563    0.770563
+macro avg      0.752135  0.753401  0.752752  231.000000
+weighted avg   0.771167  0.770563  0.770850  231.000000
+
+GridSearching KNN-MinMaxScaler
+
+KNN-MinMaxScaler - Melhor: 0.7580013976240392 usando {'KNN__metric': 'manhattan', 'KNN__n_neighbors': 19, 'KNN__weights': 'uniform'}
+
+Training for KNN-MinMaxScaler
+
+Estimation for KNN-MinMaxScaler
+
+Confusion Matrix:
+[[123  24]
+ [ 25  59]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.831081  0.836735  0.833898  147.000000
+1              0.710843  0.702381  0.706587   84.000000
+accuracy       0.787879  0.787879  0.787879    0.787879
+macro avg      0.770962  0.769558  0.770243  231.000000
+weighted avg   0.787358  0.787879  0.787603  231.000000
+
+GridSearching CART-orig
+
+CART-orig - Melhor: 0.7189378057302586 usando {'CART__max_depth': 5, 'CART__min_samples_split': 10}
+
+Training for CART-orig
+
+Estimation for CART-orig
+
+Confusion Matrix:
+[[102  45]
+ [ 22  62]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.822581  0.693878  0.752768  147.000000
+1              0.579439  0.738095  0.649215   84.000000
+accuracy       0.709957  0.709957  0.709957    0.709957
+macro avg      0.701010  0.715986  0.700991  231.000000
+weighted avg   0.734166  0.709957  0.715112  231.000000
+
+GridSearching CART-StandardScaler
+
+CART-StandardScaler - Melhor: 0.7207896575821104 usando {'CART__max_depth': 5, 'CART__min_samples_split': 10}
+
+Training for CART-StandardScaler
+
+Estimation for CART-StandardScaler
+
+Confusion Matrix:
+[[102  45]
+ [ 22  62]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.822581  0.693878  0.752768  147.000000
+1              0.579439  0.738095  0.649215   84.000000
+accuracy       0.709957  0.709957  0.709957    0.709957
+macro avg      0.701010  0.715986  0.700991  231.000000
+weighted avg   0.734166  0.709957  0.715112  231.000000
+
+GridSearching CART-MinMaxScaler
+
+CART-MinMaxScaler - Melhor: 0.7189378057302586 usando {'CART__max_depth': 5, 'CART__min_samples_split': 10}
+
+Training for CART-MinMaxScaler
+
+Estimation for CART-MinMaxScaler
+
+Confusion Matrix:
+[[102  45]
+ [ 22  62]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.822581  0.693878  0.752768  147.000000
+1              0.579439  0.738095  0.649215   84.000000
+accuracy       0.709957  0.709957  0.709957    0.709957
+macro avg      0.701010  0.715986  0.700991  231.000000
+weighted avg   0.734166  0.709957  0.715112  231.000000
+
+GridSearching NB-orig
+
+NB-orig - Melhor: 0.7488120195667365 usando {}
+
+Training for NB-orig
+
+Estimation for NB-orig
+
+Confusion Matrix:
+[[119  28]
+ [ 30  54]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.798658  0.809524  0.804054  147.000000
+1              0.658537  0.642857  0.650602   84.000000
+accuracy       0.748918  0.748918  0.748918    0.748918
+macro avg      0.728597  0.726190  0.727328  231.000000
+weighted avg   0.747705  0.748918  0.748253  231.000000
+
+GridSearching NB-StandardScaler
+
+NB-StandardScaler - Melhor: 0.7488120195667365 usando {}
+
+Training for NB-StandardScaler
+
+Estimation for NB-StandardScaler
+
+Confusion Matrix:
+[[119  28]
+ [ 30  54]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.798658  0.809524  0.804054  147.000000
+1              0.658537  0.642857  0.650602   84.000000
+accuracy       0.748918  0.748918  0.748918    0.748918
+macro avg      0.728597  0.726190  0.727328  231.000000
+weighted avg   0.747705  0.748918  0.748253  231.000000
+
+GridSearching NB-MinMaxScaler
+
+NB-MinMaxScaler - Melhor: 0.7488120195667365 usando {}
+
+Training for NB-MinMaxScaler
+
+Estimation for NB-MinMaxScaler
+
+Confusion Matrix:
+[[119  28]
+ [ 30  54]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.798658  0.809524  0.804054  147.000000
+1              0.658537  0.642857  0.650602   84.000000
+accuracy       0.748918  0.748918  0.748918    0.748918
+macro avg      0.728597  0.726190  0.727328  231.000000
+weighted avg   0.747705  0.748918  0.748253  231.000000
+
+GridSearching Bag-orig
+
+Bag-orig - Melhor: 0.7468553459119497 usando {'Bag__max_samples': 0.5, 'Bag__n_estimators': 100}
+
+Training for Bag-orig
+
+Estimation for Bag-orig
+
+Confusion Matrix:
+[[120  27]
+ [ 23  61]]
+
+Classification Report:
+              precision    recall  f1-score    support
+0              0.839161  0.816327  0.827586  147.00000
+1              0.693182  0.726190  0.709302   84.00000
+accuracy       0.783550  0.783550  0.783550    0.78355
+macro avg      0.766171  0.771259  0.768444  231.00000
+weighted avg   0.786078  0.783550  0.784574  231.00000
+
+GridSearching Bag-StandardScaler
+
+Bag-StandardScaler - Melhor: 0.7338923829489868 usando {'Bag__max_samples': 0.75, 'Bag__n_estimators': 200}
+
+Training for Bag-StandardScaler
+
+Estimation for Bag-StandardScaler
+
+Confusion Matrix:
+[[115  32]
+ [ 24  60]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.827338  0.782313  0.804196  147.000000
+1              0.652174  0.714286  0.681818   84.000000
+accuracy       0.757576  0.757576  0.757576    0.757576
+macro avg      0.739756  0.748299  0.743007  231.000000
+weighted avg   0.763642  0.757576  0.759695  231.000000
+
+GridSearching Bag-MinMaxScaler
+
+Bag-MinMaxScaler - Melhor: 0.7413347309573725 usando {'Bag__max_samples': 0.5, 'Bag__n_estimators': 200}
+
+Training for Bag-MinMaxScaler
+
+Estimation for Bag-MinMaxScaler
+
+Confusion Matrix:
+[[120  27]
+ [ 26  58]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.821918  0.816327  0.819113  147.000000
+1              0.682353  0.690476  0.686391   84.000000
+accuracy       0.770563  0.770563  0.770563    0.770563
+macro avg      0.752135  0.753401  0.752752  231.000000
+weighted avg   0.771167  0.770563  0.770850  231.000000
+
+GridSearching RF-orig
+
+RF-orig - Melhor: 0.7561844863731656 usando {'RF__max_depth': 5, 'RF__n_estimators': 200}
+
+Training for RF-orig
+
+Estimation for RF-orig
+
+Confusion Matrix:
+[[120  27]
+ [ 26  58]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.821918  0.816327  0.819113  147.000000
+1              0.682353  0.690476  0.686391   84.000000
+accuracy       0.770563  0.770563  0.770563    0.770563
+macro avg      0.752135  0.753401  0.752752  231.000000
+weighted avg   0.771167  0.770563  0.770850  231.000000
+
+GridSearching RF-StandardScaler
+
+RF-StandardScaler - Melhor: 0.7598183088749126 usando {'RF__max_depth': 5, 'RF__n_estimators': 50}
+
+Training for RF-StandardScaler
+
+Estimation for RF-StandardScaler
+
+Confusion Matrix:
+[[120  27]
+ [ 28  56]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.810811  0.816327  0.813559  147.000000
+1              0.674699  0.666667  0.670659   84.000000
+accuracy       0.761905  0.761905  0.761905    0.761905
+macro avg      0.742755  0.741497  0.742109  231.000000
+weighted avg   0.761316  0.761905  0.761595  231.000000
+
+GridSearching RF-MinMaxScaler
+
+RF-MinMaxScaler - Melhor: 0.7618798043326345 usando {'RF__max_depth': 5, 'RF__n_estimators': 50}
+
+Training for RF-MinMaxScaler
+
+Estimation for RF-MinMaxScaler
+
+Confusion Matrix:
+[[118  29]
+ [ 26  58]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.819444  0.802721  0.810997  147.000000
+1              0.666667  0.690476  0.678363   84.000000
+accuracy       0.761905  0.761905  0.761905    0.761905
+macro avg      0.743056  0.746599  0.744680  231.000000
+weighted avg   0.763889  0.761905  0.762766  231.000000
+
+GridSearching ET-orig
+
+ET-orig - Melhor: 0.7522711390635919 usando {'ET__max_depth': 5, 'ET__n_estimators': 100}
+
+Training for ET-orig
+
+Estimation for ET-orig
+
+Confusion Matrix:
+[[134  13]
+ [ 39  45]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.774566  0.911565  0.837500  147.000000
+1              0.775862  0.535714  0.633803   84.000000
+accuracy       0.774892  0.774892  0.774892    0.774892
+macro avg      0.775214  0.723639  0.735651  231.000000
+weighted avg   0.775038  0.774892  0.763428  231.000000
+
+GridSearching ET-StandardScaler
+
+ET-StandardScaler - Melhor: 0.752271139063592 usando {'ET__max_depth': 5, 'ET__n_estimators': 200}
+
+Training for ET-StandardScaler
+
+Estimation for ET-StandardScaler
+
+Confusion Matrix:
+[[135  12]
+ [ 40  44]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.771429  0.918367  0.838509  147.000000
+1              0.785714  0.523810  0.628571   84.000000
+accuracy       0.774892  0.774892  0.774892    0.774892
+macro avg      0.778571  0.721088  0.733540  231.000000
+weighted avg   0.776623  0.774892  0.762168  231.000000
+
+GridSearching ET-MinMaxScaler
+
+ET-MinMaxScaler - Melhor: 0.7486023759608665 usando {'ET__max_depth': 5, 'ET__n_estimators': 50}
+
+Training for ET-MinMaxScaler
+
+Estimation for ET-MinMaxScaler
+
+Confusion Matrix:
+[[133  14]
+ [ 43  41]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.755682  0.904762  0.823529  147.000000
+1              0.745455  0.488095  0.589928   84.000000
+accuracy       0.753247  0.753247  0.753247    0.753247
+macro avg      0.750568  0.696429  0.706729  231.000000
+weighted avg   0.751963  0.753247  0.738583  231.000000
+
+GridSearching Ada-orig
+
+Ada-orig - Melhor: 0.7524458420684835 usando {'Ada__learning_rate': 0.1, 'Ada__n_estimators': 100}
+
+Training for Ada-orig
+
+Estimation for Ada-orig
+
+Confusion Matrix:
+[[125  22]
+ [ 34  50]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.786164  0.850340  0.816993  147.000000
+1              0.694444  0.595238  0.641026   84.000000
+accuracy       0.757576  0.757576  0.757576    0.757576
+macro avg      0.740304  0.722789  0.729010  231.000000
+weighted avg   0.752811  0.757576  0.753005  231.000000
+
+GridSearching Ada-StandardScaler
+
+Ada-StandardScaler - Melhor: 0.7524458420684835 usando {'Ada__learning_rate': 0.1, 'Ada__n_estimators': 100}
+
+Training for Ada-StandardScaler
+
+Estimation for Ada-StandardScaler
+
+Confusion Matrix:
+[[125  22]
+ [ 34  50]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.786164  0.850340  0.816993  147.000000
+1              0.694444  0.595238  0.641026   84.000000
+accuracy       0.757576  0.757576  0.757576    0.757576
+macro avg      0.740304  0.722789  0.729010  231.000000
+weighted avg   0.752811  0.757576  0.753005  231.000000
+
+GridSearching Ada-MinMaxScaler
+
+Ada-MinMaxScaler - Melhor: 0.7524458420684835 usando {'Ada__learning_rate': 0.1, 'Ada__n_estimators': 100}
+
+Training for Ada-MinMaxScaler
+
+Estimation for Ada-MinMaxScaler
+
+Confusion Matrix:
+[[125  22]
+ [ 34  50]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.786164  0.850340  0.816993  147.000000
+1              0.694444  0.595238  0.641026   84.000000
+accuracy       0.757576  0.757576  0.757576    0.757576
+macro avg      0.740304  0.722789  0.729010  231.000000
+weighted avg   0.752811  0.757576  0.753005  231.000000
+
+GridSearching GB-orig
+
+GB-orig - Melhor: 0.7393780573025857 usando {'GB__learning_rate': 0.1, 'GB__n_estimators': 50}
+
+Training for GB-orig
+
+Estimation for GB-orig
+
+Confusion Matrix:
+[[116  31]
+ [ 29  55]]
+
+Classification Report:
+              precision    recall  f1-score    support
+0              0.800000  0.789116  0.794521  147.00000
+1              0.639535  0.654762  0.647059   84.00000
+accuracy       0.740260  0.740260  0.740260    0.74026
+macro avg      0.719767  0.721939  0.720790  231.00000
+weighted avg   0.741649  0.740260  0.740898  231.00000
+
+GridSearching GB-StandardScaler
+
+GB-StandardScaler - Melhor: 0.7430817610062893 usando {'GB__learning_rate': 0.1, 'GB__n_estimators': 50}
+
+Training for GB-StandardScaler
+
+Estimation for GB-StandardScaler
+
+Confusion Matrix:
+[[117  30]
+ [ 29  55]]
+
+Classification Report:
+              precision    recall  f1-score     support
+0              0.801370  0.795918  0.798635  147.000000
+1              0.647059  0.654762  0.650888   84.000000
+accuracy       0.744589  0.744589  0.744589    0.744589
+macro avg      0.724214  0.725340  0.724761  231.000000
+weighted avg   0.745257  0.744589  0.744909  231.000000
+
+GridSearching GB-MinMaxScaler
+
+GB-MinMaxScaler - Melhor: 0.7412299091544374 usando {'GB__learning_rate': 0.1, 'GB__n_estimators': 50}
+
+Training for GB-MinMaxScaler
+
+Estimation for GB-MinMaxScaler
+
+Confusion Matrix:
+[[116  31]
+ [ 29  55]]
+
+Classification Report:
+              precision    recall  f1-score    support
+0              0.800000  0.789116  0.794521  147.00000
+1              0.639535  0.654762  0.647059   84.00000
+accuracy       0.740260  0.740260  0.740260    0.74026
+macro avg      0.719767  0.721939  0.720790  231.00000
+weighted avg   0.741649  0.740260  0.740898  231.00000
+
+Best results sheet
+                                            precision                                   recall                                 f1-score                                 support
+0                      (Bag-orig, 0.8391608391608392)  (ET-StandardScaler, 0.9183673469387755)  (LR-StandardScaler, 0.8387096774193548)                    (Voting-orig, 147.0)
+1             (ET-StandardScaler, 0.7857142857142857)          (CART-orig, 0.7380952380952381)           (Bag-orig, 0.7093023255813954)                     (Voting-orig, 84.0)
+accuracy       (KNN-MinMaxScaler, 0.7878787878787878)   (KNN-MinMaxScaler, 0.7878787878787878)   (KNN-MinMaxScaler, 0.7878787878787878)  (KNN-MinMaxScaler, 0.7878787878787878)
+macro avg     (ET-StandardScaler, 0.7785714285714286)           (Bag-orig, 0.7712585034013606)   (KNN-MinMaxScaler, 0.7702425657160256)                    (Voting-orig, 231.0)
+weighted avg   (KNN-MinMaxScaler, 0.7873582783221336)   (KNN-MinMaxScaler, 0.7878787878787878)   (KNN-MinMaxScaler, 0.7876032219074948)                    (Voting-orig, 231.0)
+
+Results graded by standard deviation (smaller is better)
+KNN-MinMaxScaler         0.217134
+Bag-orig                 0.257755
+KNN-orig                 0.318385
+LR-StandardScaler        0.364821
+LR-orig                  0.435800
+Bag-MinMaxScaler         0.494082
+KNN-StandardScaler       0.494082
+RF-orig                  0.494082
+LR-MinMaxScaler          0.506179
+ET-orig                  0.547337
+ET-StandardScaler        0.550926
+Voting-MinMaxScaler      0.565837
+RF-MinMaxScaler          0.624598
+Voting-orig              0.634443
+RF-StandardScaler        0.652262
+Bag-StandardScaler       0.659375
+Ada-StandardScaler       0.793775
+Voting-StandardScaler    0.793775
+Ada-orig                 0.793775
+Ada-MinMaxScaler         0.793775
+NB-MinMaxScaler          0.876883
+NB-StandardScaler        0.876883
+NB-orig                  0.876883
+GB-StandardScaler        0.927722
+ET-MinMaxScaler          0.945821
+GB-orig                  0.992444
+GB-MinMaxScaler          0.992444
+CART-MinMaxScaler        1.310754
+CART-StandardScaler      1.310754
+CART-orig                1.310754
+dtype: float64
