@@ -25,16 +25,6 @@ transformers = [
     MinMaxScalerTransformer()
     ]
 
-''' 
-CARTClassifier(),
-    NaiveBayesClassifier(),
-    BaggingClassifierModel(),
-    RandomForestClassifierModel(),
-    ExtraTreesClassifierModel(),
-    AdaBoostClassifierModel(),
-    GradientBoostingClassifierModel(),
-    '''
-
 
 models = [
     VotingClassifierModel(),
